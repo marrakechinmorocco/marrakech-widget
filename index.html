@@ -2,32 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Find Your Destination</title>
+  <title>Marrakech Hotels Widget</title>
 </head>
-<body style="font-family:sans-serif; text-align:center; margin-top:100px;">
+<body>
+  <!-- Hotel widget script -->
+  <script async src="https://tpwgts.com/content?currency=usd&amp;trs=435903&amp;shmarker=650234&amp;combine_promos=101_7873&amp;show_hotels=true&amp;powered_by=true&amp;locale=en&amp;searchUrl=www.aviasales.com%2Fsearch&amp;primary_override=%23ff3131&amp;color_button=%23ff3131&amp;color_icons=%2332a8dd&amp;dark=%23262626&amp;light=%23FFFFFF&amp;secondary=%23FFFFFF&amp;special=%23C4C4C4&amp;color_focused=%2332a8dd&amp;border_radius=0&amp;no_labels=true&amp;plain=true&amp;destination=RAK&amp;promo_id=7879&amp;campaign_id=100" charset="utf-8"></script>
 
-  <div class="widget-container">
-    <button onclick="reloadAndLoadScript()" style="padding:10px 20px; background-color:#ff3131; color:#fff; border:none; border-radius:4px; cursor:pointer;">
-      Find Your Destination
-    </button>
-  </div>
-
-  <script>
-    function reloadAndLoadScript() {
-      // Reload page
-      location.reload();
-
-      // OR reload only the widget:
-      /*
-      let script = document.createElement("script");
-      script.setAttribute("async", "");
-      script.setAttribute("charset", "utf-8");
-      script.src = "https://tpwgts.com/content?currency=usd&amp;trs=435903&amp;shmarker=650234&amp;combine_promos=101_7873&amp;show_hotels=true&amp;powered_by=true&amp;locale=en&amp;searchUrl=www.aviasales.com%2Fsearch&amp;primary_override=%23ff3131&amp;color_button=%23ff3131&amp;color_icons=%2332a8dd&amp;dark=%23262626&amp;light=%23FFFFFF&amp;secondary=%23FFFFFF&amp;special=%23C4C4C4&amp;color_focused=%2332a8dd&amp;border_radius=0&amp;no_labels=true&amp;plain=true&amp;destination=RAK&amp;promo_id=7879&amp;campaign_id=100";
-      document.body.appendChild(script);
-      */
-    }
-  </script>
-
+  <!-- Fallback link for users if widget fails to load or is blocked -->
+  <p>If the hotel widget does not display, you can search hotels directly here:</p>
+  <a href="https://www.zenhotels.com/search?city=RAK" target="_blank" rel="noopener noreferrer" style="color:#ff3131; font-weight:bold; text-decoration:none;">
+    Search Hotels in Marrakech
+  </a>
 </body>
 </html>
