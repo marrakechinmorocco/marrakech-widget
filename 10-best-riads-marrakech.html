@@ -137,12 +137,13 @@
     .prev { left: 10px; }
     .next { right: 10px; }
 
+   /* Responsive */
     @media (max-width: 992px) {
       .card { flex: 0 0 calc((100% / 2) - 15px); }
     }
 
     @media (max-width: 600px) {
-      .card { flex: 0 0 90%; margin: 0 5%; }
+      .card { flex: 0 0 100%; margin: 0; }
     }
   </style>
 </head>
@@ -301,32 +302,33 @@
   </div>
 
 <script>
-  const slider = document.getElementById('slider');
-  const totalCards = document.querySelectorAll('.card').length;
-  let currentIndex = 0;
-  const visibleCards = 2;
+    const slider = document.getElementById('slider');
+    let currentIndex = 0;
 
-  // Function to dynamically set card widths based on container
-  function updateCardWidth() {
-    const sliderContainerWidth = document.querySelector('.slider-container').offsetWidth;
-    const cards = document.querySelectorAll('.card');
-    const cardWidth = (sliderContainerWidth / visibleCards) - 20; // 20px margin
-    cards.forEach(card => card.style.flex = `0 0 ${cardWidth}px`);
-  }
+    function getVisibleCards() {
+      const width = window.innerWidth;
+      if (width <= 600) return 1; // Mobile: 1 card
+      if (width <= 992) return 2; // Tablet: 2 cards
+      return 3;                   // Desktop: 3 cards
+    }
 
-  // Update card width on page load and when window is resized
-  window.addEventListener('load', updateCardWidth);
-  window.addEventListener('resize', updateCardWidth);
+    function moveSlide(direction) {
+      const cards = document.querySelectorAll('.card');
+      const visibleCards = getVisibleCards();
+      const maxIndex = cards.length - visibleCards;
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = 0;
+      if (currentIndex > maxIndex) currentIndex = maxIndex;
 
-  function moveSlide(direction) {
-    const maxIndex = totalCards - visibleCards;
-    currentIndex += direction;
-    if (currentIndex < 0) currentIndex = 0;
-    if (currentIndex > maxIndex) currentIndex = maxIndex;
-    const cardWidth = document.querySelector('.card').offsetWidth + 20; // including margin
-    slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-  }
-</script>
+      const cardStyle = window.getComputedStyle(cards[0]);
+      const cardWidth = cards[0].offsetWidth + parseInt(cardStyle.marginLeft) + parseInt(cardStyle.marginRight);
+      slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
+
+    window.addEventListener('resize', () => {
+      moveSlide(0); // Reset transform on resize
+    });
+  </script>
 
 </body>
 </html>
