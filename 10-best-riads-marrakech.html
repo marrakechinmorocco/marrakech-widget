@@ -3,142 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Top Riads in Marrakesh</title>
+  <title>10 Best Riads in Marrakesh</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background: #f9f9f9;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .slider-container {
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .slider {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    .card {
-      flex: 0 0 calc((100% / 3) - 20px);
-      margin: 0 10px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 12px 12px 0 0;
-    }
-
-    .card-content {
-      padding: 10px 15px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-
-    .card h2 {
-      font-size: 18px;
-      margin: 0 0 5px 0;
-      line-height: 1.2em;
-      min-height: 2.4em;
-    }
-
-    .card .location {
-      font-size: 14px;
-      font-weight: bold;
-      margin: 3px 0;
-    }
-
-    .description-score {
-      flex-grow: 1; /* ensures score stays aligned */
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .card .description {
-      font-size: 14px;
-      color: #555;
-      margin: 5px 0;
-      min-height: 60px;
-    }
-
-    .card .score {
-      font-weight: bold;
-      color: #333;
-      margin-top: 5px;
-      min-height: 20px;
-    }
-
-    .btn {
-      margin-top: auto; /* pushes button to bottom */
-      display: inline-block;
-      padding: 8px 12px;
-      background: #007BFF;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      text-align: center;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background: #0056b3;
-    }
-
-    .prev, .next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0,0,0,0.6);
-      color: white;
-      border: none;
-      padding: 12px;
-      cursor: pointer;
-      border-radius: 50%;
-      font-size: 18px;
-      z-index: 10;
-    }
-
+    body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f9f9f9; }
+    .slider-container { position: relative; overflow: hidden; width: 100%; max-width: 1200px; margin: auto; }
+    .slider { display: flex; transition: transform 0.5s ease-in-out; }
+    .card { flex: 0 0 calc((100% / 3) - 20px); margin: 0 10px; background: #fff; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
+    .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 12px 12px 0 0; }
+    .card-content { padding: 10px 15px; display: flex; flex-direction: column; flex-grow: 1; }
+    .card h2 { font-size: 18px; margin: 0 0 5px 0; line-height: 1.2em; min-height: 2.4em; }
+    .card .location { font-size: 14px; font-weight: bold; margin: 3px 0; }
+    .description-score { flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .card .description { font-size: 14px; color: #555; margin: 5px 0; min-height: 60px; }
+    .card .score { font-weight: bold; color: #333; margin-top: 5px; min-height: 20px; }
+    .btn { margin-top: auto; display: inline-block; padding: 8px 12px; background: #007BFF; color: #fff; text-decoration: none; border-radius: 6px; text-align: center; transition: background 0.3s; }
+    .btn:hover { background: #0056b3; }
+    .prev, .next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: white; border: none; padding: 12px; cursor: pointer; border-radius: 50%; font-size: 18px; z-index: 10; }
     .prev { left: 0; }
     .next { right: 0; }
-
-    .prev:hover, .next:hover {
-      background: rgba(0,0,0,0.8);
-    }
-
+    .prev:hover, .next:hover { background: rgba(0,0,0,0.8); }
     .card:first-child { margin-left: 0; }
     .card:last-child { margin-right: 0; }
   </style>
 </head>
 <body>
 
-  <h1>Top Riads in Marrakesh</h1>
-
   <div class="slider-container">
     <div class="slider" id="slider">
 
-      <!-- Riad N'S & Spa -->
+      <!-- Example Riad 1 -->
       <div class="card">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTPLc1CZU0S82VFWN3lbrq_HThW_Gc-nE0HLKOsyUrtb-Z1jaPiVIlnmPjbN9Em77_ZP_84k2YExEnZjeyyvJHWc8Z8b0pa9iWnQVmHUVKsEFcOf8ixY68LzqxiEzQO2rozEuK4oCz3ztHr8GggdaumdWcL5R28uvN-DigLDWMY5VCqmPYMORWYWIXcrv6/s1600/riad-ns-spa.webp" alt="Riad N'S & Spa">
+        <img src="https://via.placeholder.com/600x400?text=Riad+N%27S+%26+Spa" alt="Riad N'S & Spa">
         <div class="card-content">
           <h2>Riad N'S & Spa</h2>
           <p class="location">Medina, Marrakesh – 1.1 km from downtown</p>
@@ -150,9 +45,9 @@
         </div>
       </div>
 
-      <!-- Riad El Hara -->
+      <!-- Example Riad 2 -->
       <div class="card">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8qrhAHU3mWNH-Z19snhPMCPzcqISN3KMTKTOHr3I2aKXp8gcnB3z0Oi_xALzzOhu2nNhgJrYkG5CgOpixYP4qWlgf7afmhpHYv3X9v8GGhOKMFpNAenIsOK-UUsNWMGjlEIUXgzqu7zcjNLbwnFYytJXFOKkgpVKstffaQEh0B9obwJ7oGrsoo43_YOIK/s1600/riad-el-hara.webp" alt="Riad El Hara">
+        <img src="https://via.placeholder.com/600x400?text=Riad+El+Hara" alt="Riad El Hara">
         <div class="card-content">
           <h2>Riad El Hara</h2>
           <p class="location">Marrakesh – 450 m from downtown</p>
@@ -164,9 +59,9 @@
         </div>
       </div>
 
-      <!-- Riad Les Nuits de Marrakech -->
+      <!-- Example Riad 3 -->
       <div class="card">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgi-RzEOUEx6kYT9YfsyCIAi-_hL7nyWcKNX9_DOkg3mvUW_BryyIMO06juR52uFFtPjxtw2f5Jizj7E7wm4aptie2wExNxxwxp3zPH30YH2slb1IHna8Z0FF2rhMBNo2Gogs5lwaICfpDWC0yt-cNSsHUIkdpEKlOuUG74wZg1dIH3nyjd20geZoXXc_tB/s1600/riad-les-nuits-de-marrakech.webp" alt="Riad Les Nuits de Marrakech">
+        <img src="https://via.placeholder.com/600x400?text=Riad+Les+Nuits+de+Marrakech" alt="Riad Les Nuits de Marrakech">
         <div class="card-content">
           <h2>Riad Les Nuits de Marrakech</h2>
           <p class="location">Medina, Marrakesh – 1.5 km from downtown</p>
@@ -178,7 +73,7 @@
         </div>
       </div>
 
-      <!-- Le Palais Averroes -->
+      <!-- Example Riad 4 -->
       <div class="card">
         <img src="https://via.placeholder.com/600x400?text=Le+Palais+Averroes" alt="Le Palais Averroes">
         <div class="card-content">
@@ -192,7 +87,7 @@
         </div>
       </div>
 
-      <!-- Riad Élégant et Convivial -->
+      <!-- Example Riad 5 -->
       <div class="card">
         <img src="https://via.placeholder.com/600x400?text=Riad+Elegant+et+Convivial" alt="Riad Élégant et Convivial">
         <div class="card-content">
