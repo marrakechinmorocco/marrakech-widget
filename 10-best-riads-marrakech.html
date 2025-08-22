@@ -115,6 +115,7 @@
       border-radius: 50%;
       font-size: 20px;
       transition: background 0.3s;
+      z-index: 10;
     }
 
     .prev:hover, .next:hover {
@@ -302,58 +303,67 @@
       
     </div>
 
-
-      <button class="prev" onclick="moveSlide(-1)">❮</button>
+  <button class="prev" onclick="moveSlide(-1)">❮</button>
     <button class="next" onclick="moveSlide(1)">❯</button>
     <div class="dots" id="dots"></div>
   </div>
+
   <script>
-let slideIndex = 0;
-let autoSlide;
-const slides = document.querySelectorAll('.slide');
-const slidesContainer = document.querySelector('.slides');
-const dotsContainer = document.querySelector('.dots');
+    const slider = document.getElementById('slider');
+    const cards = document.querySelectorAll('.card');
+    const totalCards = cards.length;
+    const visibleCards = 3;
+    const totalSlides = Math.ceil(totalCards / visibleCards);
+    const dotsContainer = document.getElementById('dots');
 
-// Create dots
-slides.forEach((_, i) => {
-  let dot = document.createElement("span");
-  dot.classList.add("dot");
-  dot.addEventListener("click", () => showSlide(i));
-  dotsContainer.appendChild(dot);
-});
-const dots = document.querySelectorAll(".dot");
+    let currentIndex = 0;
+    let autoSlide;
 
-function showSlide(index) {
-  if (index >= slides.length) index = 0;
-  if (index < 0) index = slides.length - 1;
-  slideIndex = index;
-  slidesContainer.style.transform = `translateX(-${index * 100}%)`;
-  dots.forEach(dot => dot.classList.remove("active"));
-  dots[index].classList.add("active");
-}
+    // Create dots
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('span');
+      dot.classList.add('dot');
+      if (i === 0) dot.classList.add('active');
+      dot.onclick = () => goToSlide(i);
+      dotsContainer.appendChild(dot);
+    }
+    const dots = document.querySelectorAll('.dot');
 
-function moveSlide(step) {
-  showSlide(slideIndex + step);
-  resetAutoPlay();
-}
+    function updateDots() {
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+    }
 
-// Autoplay
-function startAutoPlay() {
-  autoSlide = setInterval(() => {
-    showSlide(slideIndex + 1);
-  }, 4000); // Change slide every 4s
-}
+    function goToSlide(index) {
+      if (index < 0) index = 0;
+      if (index >= totalSlides) index = totalSlides - 1;
+      currentIndex = index;
+      slider.style.transform = `translateX(-${index * 100}%)`;
+      updateDots();
+    }
 
-function resetAutoPlay() {
-  clearInterval(autoSlide);
-  startAutoPlay();
-}
+    function moveSlide(step) {
+      goToSlide(currentIndex + step);
+      resetAutoPlay();
+    }
 
-// Init
-showSlide(slideIndex);
-startAutoPlay();
-</script>
+    // Autoplay
+    function startAutoPlay() {
+      autoSlide = setInterval(() => {
+        goToSlide((currentIndex + 1) % totalSlides);
+      }, 4000);
+    }
 
+    function resetAutoPlay() {
+      clearInterval(autoSlide);
+      startAutoPlay();
+    }
 
+    // Init
+    goToSlide(0);
+    startAutoPlay();
+  </script>
+  
 </body>
 </html>
