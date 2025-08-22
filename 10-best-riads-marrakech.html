@@ -308,48 +308,19 @@
     <div class="dots" id="dots"></div>
   </div>
   <script>
-  const slider = document.getElementById('slider');
-  const cards = document.querySelectorAll('.card');
-  const totalCards = cards.length;
-  const visibleCards = 3;
-  const dotsContainer = document.getElementById('dots');
-  let currentIndex = 0;
+    const slider = document.getElementById('slider');
+    const totalCards = document.querySelectorAll('.card').length;
+    let currentIndex = 0;
+    const visibleCards = 3;
 
-  // Calculate how many slides we need
-  const totalSlides = Math.ceil(totalCards / visibleCards);
-
-  // Create dots
-  for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement('span');
-    dot.classList.add('dot');
-    if (i === 0) dot.classList.add('active');
-    dot.onclick = () => goToSlide(i);
-    dotsContainer.appendChild(dot);
-  }
-
-  function updateDots() {
-    document.querySelectorAll('.dot').forEach((dot, i) => {
-      dot.classList.toggle('active', i === currentIndex);
-    });
-  }
-
-  function moveSlide(direction) {
-    currentIndex += direction;
-    if (currentIndex < 0) currentIndex = 0;
-    if (currentIndex >= totalSlides) currentIndex = totalSlides - 1;
-
-    const slideWidth = 100 / totalSlides; 
-    slider.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
-    updateDots();
-  }
-
-  function goToSlide(index) {
-    currentIndex = index;
-    const slideWidth = 100 / totalSlides;
-    slider.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
-    updateDots();
-  }
-</script>
+    function moveSlide(direction) {
+      const maxIndex = Math.ceil(totalCards / visibleCards) - 1;
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = 0;
+      if (currentIndex > maxIndex) currentIndex = maxIndex;
+      slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+  </script>
 
 
 </body>
