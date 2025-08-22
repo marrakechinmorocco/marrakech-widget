@@ -138,7 +138,7 @@
     .prev { left: 10px; }
     .next { right: 10px; }
 
-    /* Responsive */
+   /* Responsive */
     @media (max-width: 992px) {
       .card { flex: 0 0 calc((100% / 2) - 15px); }
     }
@@ -313,22 +313,28 @@
       return 3;                   // Desktop: 3 cards
     }
 
-    function moveSlide(direction) {
+    function updateSliderTransform() {
       const cards = document.querySelectorAll('.card');
       const visibleCards = getVisibleCards();
       const maxIndex = cards.length - visibleCards;
-      currentIndex += direction;
-      if (currentIndex < 0) currentIndex = 0;
-      if (currentIndex > maxIndex) currentIndex = maxIndex;
+      if (currentIndex > maxIndex) currentIndex = maxIndex < 0 ? 0 : maxIndex;
 
       const cardStyle = window.getComputedStyle(cards[0]);
       const cardWidth = cards[0].offsetWidth + parseInt(cardStyle.marginLeft) + parseInt(cardStyle.marginRight);
       slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
     }
 
+    function moveSlide(direction) {
+      currentIndex += direction;
+      updateSliderTransform();
+    }
+
     window.addEventListener('resize', () => {
-      moveSlide(0); // Reset transform on resize
+      updateSliderTransform(); // Adjust slider when window resizes
     });
+
+    // Initial adjustment
+    updateSliderTransform();
   </script>
 
 </body>
