@@ -308,27 +308,19 @@
     <div class="dots" id="dots"></div>
   </div>
 
- <script>
-  const slider = document.getElementById('slider');
-  const cards = document.querySelectorAll('.card');
-  const totalCards = cards.length;
-  let currentIndex = 0;
-  const visibleCards = 3;
+  <script>
+    const slider = document.getElementById('slider');
+    const totalCards = document.querySelectorAll('.card').length;
+    let currentIndex = 0;
+    const visibleCards = 3;
 
-  function moveSlide(direction) {
-    const maxIndex = Math.ceil(totalCards / visibleCards) - 1;
-    currentIndex += direction;
-
-    // Loop infinitely
-    if (currentIndex < 0) currentIndex = maxIndex;
-    if (currentIndex > maxIndex) currentIndex = 0;
-
-    slider.style.transform = `translateX(-${currentIndex * (100 / visibleCards)}%)`;
-  }
-
-  // Optional: autoplay every 4 seconds
-  setInterval(() => moveSlide(1), 4000);
-</script>
-
+    function moveSlide(direction) {
+      const maxIndex = Math.ceil(totalCards / visibleCards) - 1;
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = 0;
+      if (currentIndex > maxIndex) currentIndex = maxIndex;
+      slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+  </script>
 </body>
 </html>
