@@ -6,30 +6,40 @@
   <title>10 Best Riads in Marrakesh</title>
   <style>
     body {
-      font-family: "Segoe UI", Tahoma, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 30px;
-      background: linear-gradient(to right, #f9f9f9, #f0f0f0);
+      padding: 20px;
+      background: #f0f2f5;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: #1a1a1a;
     }
 
     .slider-container {
       position: relative;
       overflow: hidden;
+      width: 100%;
       max-width: 1200px;
       margin: auto;
+      padding: 10px 0;
     }
 
     .slider {
       display: flex;
-      transition: transform 0.6s ease;
+      transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
     }
 
     .card {
-      flex: 0 0 calc(25.333% - 20px);
-      margin: 10px;
+      flex: 0 0 calc((100% / 3) - 20px);
+      margin: 0 10px;
       background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -37,63 +47,66 @@
     }
 
     .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.18);
     }
 
     .card img {
       width: 100%;
       height: 220px;
       object-fit: cover;
-      transition: transform 0.4s;
-    }
-
-    .card:hover img {
-      transform: scale(1.05);
     }
 
     .card-content {
-      padding: 18px;
+      padding: 15px 20px;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
     }
 
     .card h2 {
-      font-size: 18px;
-      margin: 0 0 8px;
-      color: #222;
+      font-size: 20px;
+      margin: 0 0 8px 0;
+      line-height: 1.2em;
+      color: #0d1a26;
     }
 
-    .location {
+    .card .location {
       font-size: 14px;
       font-weight: 600;
-      color: #555;
+      color: #007BFF;
       margin-bottom: 10px;
     }
 
-    .description {
-      font-size: 14px;
-      color: #666;
+    .description-score {
       flex-grow: 1;
-      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
-    .score {
-      font-weight: bold;
-      color: #444;
-      margin-top: 10px;
+    .card .description {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+      min-height: 60px;
+    }
+
+    .card .score {
+      font-weight: 700;
+      color: #FF9900;
+      margin-bottom: 10px;
+      font-size: 15px;
     }
 
     .btn {
-      margin-top: 15px;
       display: inline-block;
-      padding: 10px 14px;
+      padding: 10px 16px;
       background: #007BFF;
       color: #fff;
-      font-size: 14px;
       text-decoration: none;
       border-radius: 8px;
+      font-weight: 600;
       text-align: center;
       transition: background 0.3s;
     }
@@ -102,56 +115,34 @@
       background: #0056b3;
     }
 
-    /* Navigation */
     .prev, .next {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       background: rgba(0,0,0,0.5);
-      color: white;
+      color: #fff;
       border: none;
       padding: 14px;
       cursor: pointer;
       border-radius: 50%;
-      font-size: 20px;
-      transition: background 0.3s;
+      font-size: 22px;
       z-index: 10;
+      transition: background 0.3s;
     }
 
     .prev:hover, .next:hover {
       background: rgba(0,0,0,0.8);
     }
 
-    .prev { left: 15px; }
-    .next { right: 15px; }
+    .prev { left: 10px; }
+    .next { right: 10px; }
 
-    /* Dots Indicator */
-    .dots {
-      text-align: center;
-      margin-top: 15px;
-    }
-
-    .dot {
-      display: inline-block;
-      height: 12px;
-      width: 12px;
-      margin: 0 5px;
-      background: #bbb;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .dot.active {
-      background: #007BFF;
-    }
-
-    /* Responsive */
     @media (max-width: 992px) {
-      .card { flex: 0 0 calc(50% - 20px); }
+      .card { flex: 0 0 calc((100% / 2) - 15px); }
     }
+
     @media (max-width: 600px) {
-      .card { flex: 0 0 100%; }
+      .card { flex: 0 0 90%; margin: 0 5%; }
     }
   </style>
 </head>
@@ -308,19 +299,21 @@
     <div class="dots" id="dots"></div>
   </div>
 
-  <script>
-    const slider = document.getElementById('slider');
-    const totalCards = document.querySelectorAll('.card').length;
-    let currentIndex = 0;
-    const visibleCards = 3;
+ <script>
+  const slider = document.getElementById('slider');
+  const totalCards = document.querySelectorAll('.card').length;
+  let currentIndex = 0;
+  const visibleCards = 3;
 
-    function moveSlide(direction) {
-      const maxIndex = Math.ceil(totalCards / visibleCards) - 1;
-      currentIndex += direction;
-      if (currentIndex < 0) currentIndex = 0;
-      if (currentIndex > maxIndex) currentIndex = maxIndex;
-      slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-  </script>
+  function moveSlide(direction) {
+    const maxIndex = totalCards - visibleCards;
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = 0;
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+    const cardWidth = document.querySelector('.card').offsetWidth + 20; // including margin
+    slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  }
+</script>
+
 </body>
 </html>
