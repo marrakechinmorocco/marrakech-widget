@@ -299,11 +299,23 @@
     <div class="dots" id="dots"></div>
   </div>
 
- <script>
+<script>
   const slider = document.getElementById('slider');
   const totalCards = document.querySelectorAll('.card').length;
   let currentIndex = 0;
   const visibleCards = 3;
+
+  // Function to dynamically set card widths based on container
+  function updateCardWidth() {
+    const sliderContainerWidth = document.querySelector('.slider-container').offsetWidth;
+    const cards = document.querySelectorAll('.card');
+    const cardWidth = (sliderContainerWidth / visibleCards) - 20; // 20px margin
+    cards.forEach(card => card.style.flex = `0 0 ${cardWidth}px`);
+  }
+
+  // Update card width on page load and when window is resized
+  window.addEventListener('load', updateCardWidth);
+  window.addEventListener('resize', updateCardWidth);
 
   function moveSlide(direction) {
     const maxIndex = totalCards - visibleCards;
