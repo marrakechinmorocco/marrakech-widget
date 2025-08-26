@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Must-see attractions in Marrakesh</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f0f2f5;
+      color: #333;
+    }
+
+    h1, .slider-title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: #1a1a1a;
+    }
+
+    .slider-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 10px 0;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease;
+      will-change: transform;
+    }
+
+    .card {
+      flex: 0 0 calc((100% / 3) - 20px);
+      margin: 0 10px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card h2 {
+      font-size: 20px;
+      margin: 0 0 8px 0;
+      line-height: 1.2em;
+      color: #0d1a26;
+    }
+
+    .card .location {
+      font-size: 14px;
+      font-weight: 600;
+      color: #007BFF;
+      margin-bottom: 10px;
+    }
+
+    .description-score {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card .description {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+      min-height: 60px;
+    }
+
+    .card .score {
+      font-weight: 700;
+      color: #FF9900;
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      background: #007BFF;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      text-align: center;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      border: none;
+      padding: 14px;
+      cursor: pointer;
+      border-radius: 50%;
+      font-size: 22px;
+      z-index: 10;
+      transition: background 0.3s;
+    }
+
+    .prev:hover, .next:hover {
+      background: rgba(0,0,0,0.8);
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+   /* Responsive */
+    @media (max-width: 992px) {
+      .card { flex: 0 0 calc((100% / 2) - 15px); }
+    }
+
+    @media (max-width: 600px) {
+      .card { flex: 0 0 100%; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+<div class="slider-section">
+  <h2 class="slider-title">Must-see attractions in Marrakesh</h2>
+  <div class="slider-container">
+    <div class="slider" id="slider">
+
+      <!-- Example Riad 1 -->
+     <div class="card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9V6BVlaHMSlDTixzGvgWQG9t6YIQ6z56AfjpEYVmPmfav4SMbGXFG0RFLcPuT8NjDaNlGs_bbW_utBgeNbPYVIfa6aLr0ceaFO9rGX8dGjg4iXAvuO5ym7laB7cIFs9Uc72pp6WuQYowaBidXdsmRs-M9bNZupvweWHv6IPCLG6oUXy3u2bsx2EJtX6jQ/s1600/Koutoubia-Mosque-Tours-and-Tickets.webp" alt="Riad N'S & Spa">
+        <div class="card-content">
+          <h2>Koutoubia Mosque</h2>
+          <p class="location">is a one-minute stroll west of Djemaa El Fna</p>
+          <div class="description-score">
+            <p class="description">the first landmark to catch your eye will likely be the <strong>Koutoubia Mosque</strong>—a soaring minaret rising above the palm-lined avenues and red clay walls of the old medina. Located just a stone's throw from the iconic <strong>Jemaa el-Fna</strong> square, this architectural masterpiece is more than just a religious site—it's the spiritual, historical, and visual anchor of the city.</p>.</p>
+            <p class="score">⭐ Non-Muslims can’t go inside the Koutoubia Mosque </p>
+          </div>
+          <a href="https://www.marrakechinmorocco.com/2025/08/koutoubia-mosque-tours-and-tickets.html" class="btn" target="_blank" rel="noopener noreferrer">Read more about Koutoubia</a>
+        </div>
+      </div>
+
+      <!-- Riad El Hara -->
+      <div class="card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhClSUP_l41wfuLkWvfLwpBaLnb4nGd0RRDoZVXKQyqeOig5fujgPcvnoCe4uLwm6Af7WEDbFBIHMKCqiXbcc8GQ3HJ8hEe-XFtg8W3xqgLFgdy9m4ThM_igmlYUwYQU_0VqfscII3uI1WKCncpdmCzqC7BfSGeZ4QsBJfQgqmOqYIt-COXEJgh-EIptZbn/s1600/Riad-El-Hara.webp" alt="Riad El Hara">
+        <div class="card-content">
+          <h2>Riad El Hara</h2>
+          <p class="location">Marrakesh – 450 m from downtown</p>
+          <div class="description-score">
+            <p class="description">A 19-minute walk from Majorelle Gardens in Marrakesh. Offers accommodations with access to a hot tub, hammam, and fitness room.</p>
+            <p class="score">⭐ 9.6 Exceptional</p>
+          </div>
+          <a href="https://booking.tpm.lv/5JRfS5FD" class="btn" target="_blank" rel="noopener noreferrer">Show prices</a>
+        </div>
+      </div>
+
+      <!-- Riad Les Nuits de Marrakech -->
+      <div class="card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgNaoNApCjvt9lkfS_kbI57Hp5aGyo4ommozxM8wyyqb2CLctBa92VuG5dlRpGTiNvnTOloLSbAELSlWcLMecdapc2UL1oJmF22tgGHRJRftbCwKDbnwicpHWU1h9zam3b8_QANGYjDxPjoPBF6gXD7uB6B5uSD9b-cxmUCBa2ozOWeLZJ29VA7ZGNd4URy/s1600/Riad-Les-Nuits-de-Marrakech.webp" alt="Riad Les Nuits de Marrakech">
+        <div class="card-content">
+          <h2>Riad Les Nuits de Marrakech</h2>
+          <p class="location"> 1-minute walk from Jamaâ El Fna.</p>
+          <div class="description-score">
+            <p class="description">1-minute walk from Jamaâ El Fna. Traditional Moroccan décor with swimming pool, hot tub & terrace overlooking Medina.</p>
+            <p class="score">⭐ 9.9 Exceptional</p>
+          </div>
+          <a href="https://booking.tpm.lv/9qahCYuT" class="btn" target="_blank" rel="noopener noreferrer">Show prices</a>
+        </div>
+      </div>
+
+      <!-- Le Palais Averroes -->
+      <div class="card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHi8XzID4ZCX0br3B6ZBtVRnj0H5GLzepfavg6RoNHA6HMgC_4LPYTqo7PbQerxTVzM3MPuO-Bzg8xwF1sMijpVNlRpwyghKz_wJUC-LnJjxzH2NqPg5jYfAIflHFtkb-nR-ta1pMYgZfnBOZP6K50bbesje7GGGsfnP3GehoNdOm8GyZaD6OJjlua_-Xr/s1600/Le-Palais-Averroes.webp" alt="Le Palais Averroes">
+        <div class="card-content">
+          <h2>Le Palais Averroes - Adults Only</h2>
+          <p class="location">Marrakesh – 8.5 km from downtown</p>
+          <div class="description-score">
+            <p class="description">Recently renovated riad where guests can enjoy the outdoor pool, spa, wellness center & massage services.</p>
+            <p class="score">⭐ 9.0 Wonderful</p>
+          </div>
+          <a href="https://booking.tpm.lv/PrjaEYxI" class="btn" target="_blank" rel="noopener noreferrer">Show prices</a>
+        </div>
+      </div>
+
+      <!-- Riad Élégant et Convivial -->
+      <div class="card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNRyzlIsMmsu3TDcpZlnSaT-NTB2Sg5O7OEpF3APZyu-2R8UKtWIP_lNUA4lfRdLDo_gselUy1hVh0XdWbKEPpFLvKn-ljSTANhIw-axhxqnCWVgKFvhYpp_GzJFjzyZbUqqp-toDe7-GIfuRjFxAkHrAb52o5No1CoWz9xkHbDIn9rGqVnoYHJhUOuVlA/s1600/Riad-%C3%89l%C3%A9gant-et-Convivial.webp" alt="Riad Élégant et Convivial">
+        <div class="card-content">
+          <h2>Riad Élégant et Convivial</h2>
+          <p class="location">Marrakesh – 1 km from downtown</p>
+          <div class="description-score">
+            <p class="description">Riad Élégant et Convivial, Piscine Chauffée & Spa, Familles & Couples is a recently renovated riad in Marrakesh near Menara Gardens..</p>
+            <p class="score">⭐ Exceptional</p>
+          </div>
+          <a href="https://booking.tpm.lv/nFSNuOIj" class="btn" target="_blank" rel="noopener noreferrer">Show prices</a>
+        </div>
+      </div>
+      
+ <!-- Riad Dar Al Assad -->
+      <div class="card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTKJpuFiCBif3C6UNck6yWaRcD4rFIH06WAvP5CJlphYwAE0UHQwnlLxe9Q74tyRKhV00N0qdTPHTViCih05xMM7LCFHFCrhPIEPyj72Lfuu2edJ7BmuMAjZuc4TmXzkGbI20efRYdk6-mOx-Pwa0h9kUXJwcu1jX-uJUlAJ5qa0zLgNCU_Bkh_uizP54Z/s1600/Riad-Dar-Al-Assad.webp" alt="Riad dar al assad">
+        <div class="card-content">
+          <h2>Riad Dar Al Assad</h2>
+          <p class="location">656 feet from Jamaâ El Fna Square</p>
+          <div class="description-score">
+            <p class="description">is located in central Marrakesh, 656 feet from Jamaâ El Fna Square and near the Medina. It offers 6 luxuriously styled Moroccan guest rooms with air-conditioning.</p>
+            <p class="score">⭐ 9.5 Exceptional</p>
+          </div>
+          <a href="https://booking.tpm.lv/1HfCcPue" class="btn" target="_blank" rel="noopener noreferrer">Show prices</a>
+        </div>
+      </div>
+
+ <!-- La Villa des Orangers - Relais & Châteaux -->
+      <div class="card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiFIM1MtlPb_ZwMkIzMCEToU_kKm1MHyMdvN1gKjxTtOIIxjawJZkjKAOe_hmcsfE-xoPyfWb2cXKXBiEQGUghrLXI8UkVusBU3mhKaPsl7822SWhAPc2wXAZMM4ekDTs1fu9qA7dCaBTFNVYOGvlVuZLosRNbo2wJttZ7EYsiZSf9Xy5u6MapXw3lfZvhS/s1600/La-Villa-des-Orangers.webp" alt="La Villa des Orangers">
+        <div class="card-content">
+          <h2>La Villa des Orangers - Relais & Châteaux</h2>
+          <p class="location">a 5-minute walk from Jemaa el Fna Square</p>
+          <div class="description-score">
+            <p class="description">Villa des Orangers offers luxurious accommodations in a former palace located in the center of Marrakech, just a 5-minute walk from Jemaa el Fna Square..</p>
+            <p class="score">⭐ 9.4 Wonderful</p>
+          </div>
+          <a href="https://booking.tpm.lv/GpcjTz7z" class="btn" target="_blank" rel="noopener noreferrer">Show prices</a>
+        </div>
+      </div>
+      
+ <!-- Riad Ecila-->
+      <div class="card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqUfWvwLGwCAcGIyCljw6BdarmNqmZLOw5LyD5JduRHpVA-uffs5CNSPIeabQ7R7PYRDvoybAQLHa771E-HeXXcO2BlQKatKZkeCIZxLQKT5ZWUASDCc6upSWSXpxBykCtM9NScbF7NGzfjUAFXuytAaot8C_G5SMj9qiSgQUCEsmWuPzZz5C2XYaY5l64/s1600/Riad-Ecila.webp" alt="Riad Ecila">
+        <div class="card-content">
+          <h2>Riad Ecila</h2>
+          <p class="location">a 5-minute walk from Jamaa l' Fna Square,</p>
+          <div class="description-score">
+            <p class="description">Located in the Medina, a 5-minute walk from Jamaa l' Fna Square, Riad Ecila offers a traditional patio and a terrace.</p>
+            <p class="score">⭐ 9.5 Exceptional</p>
+          </div>
+          <a href="https://booking.tpm.lv/X49H1RVN" class="btn" target="_blank" rel="noopener noreferrer">Show prices</a>
+        </div>
+      </div>
+
+ <!-- Riad El Maktoub -->
+      <div class="card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEik2AE22c4sFLkCXaunFXQh07pzNdD8pVPqEJL3MMxy47fe2byXB4BpfJysWeytITGYdHxaeVVzD3lTqerDwJOBc-6Q58m95Pc4MIUrP9JfDYRvpss7xQIzNqQ9tL6-c6Cn_cE3Kd4KKuCuLyEmN6YdjObv0Naehkqeac8g3NRxH5wtfHsDiNQcYOG-N_R-/s1600/Riad-El-Maktoub.webp" alt="Riad El Maktoub">
+        <div class="card-content">
+          <h2>Riad El Maktoub</h2>
+          <p class="location">a 10-minute walk from Jemaa El Fna Square</p>
+          <div class="description-score">
+            <p class="description">Located a 10-minute walk from Jemaa El Fna Square, Riad El Maktoub offers a rooftop terrace, a patio with a seating area and a living room with a TV. The train station is just a 15-minute drive away..</p>
+            <p class="score">⭐ 9.2 Wonderful</p>
+          </div>
+          <a href="https://booking.tpm.lv/Yvuh3Q3p" class="btn" target="_blank" rel="noopener noreferrer">Show prices</a>
+        </div>
+      </div>
+
+ <!-- La Claire Fontaine -->
+      <div class="card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjeVMo9FUfszvX1btkDrDKgflARnJrry9s4I2G3XKxUk2jouEnVQTq45of1VU6sOB69pi6lSNa2oKTA2mCf5cPjcwZSkZUB-lCha4U22GWWRbDSjmLB67wz2lHOAVGbxzqrwbrUB4esM_-M8Kxb5wu97ICWebwH_zr2ISYWtZOC8VxktoAhdSUwroi6TJrx/s1600/La-Claire-Fontaine.webp" alt="Riad La Claire Fontaine">
+        <div class="card-content">
+          <h2>Riad La Claire Fontaine</h2>
+          <p class="location">a 15-minute walk from Jemaa El Fna Square</p>
+          <div class="description-score">
+            <p class="description">La Claire Fontaine offers a terrace with panoramic views of the High Atlas mountains, a patio with a fountain and Wi-Fi is free of charge in the entire property.</p>
+            <p class="score">⭐ 9.8 Exceptional</p>
+          </div>
+          <a href="https://booking.tpm.lv/dhkutjqn" class="btn" target="_blank" rel="noopener noreferrer">Show prices</a>
+        </div>
+      </div>
+
+         </div>
+    </div>
+
+  <button class="prev" onclick="moveSlide(-1)">❮</button>
+    <button class="next" onclick="moveSlide(1)">❯</button>
+    <div class="dots" id="dots"></div>
+  </div>
+
+<script>
+    const slider = document.getElementById('slider');
+    let currentIndex = 0;
+
+    function getVisibleCards() {
+      const width = window.innerWidth;
+      if (width <= 600) return 1; // Mobile: 1 card
+      if (width <= 992) return 2; // Tablet: 2 cards
+      return 3;                   // Desktop: 3 cards
+    }
+
+    function updateSliderTransform() {
+      const cards = document.querySelectorAll('.card');
+      const visibleCards = getVisibleCards();
+      const maxIndex = cards.length - visibleCards;
+      if (currentIndex > maxIndex) currentIndex = maxIndex < 0 ? 0 : maxIndex;
+
+      const cardStyle = window.getComputedStyle(cards[0]);
+      const cardWidth = cards[0].offsetWidth + parseInt(cardStyle.marginLeft) + parseInt(cardStyle.marginRight);
+      slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
+
+    function moveSlide(direction) {
+      currentIndex += direction;
+      updateSliderTransform();
+    }
+
+    window.addEventListener('resize', () => {
+      updateSliderTransform(); // Adjust slider when window resizes
+    });
+
+    // Initial adjustment
+    updateSliderTransform();
+  </script>
+
+</body>
+</html>
