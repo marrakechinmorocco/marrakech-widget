@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10 Best apartements  in Marrakesh</title>
+  <style>
+.booking-card {
+  display: flex;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  margin: 20px 0;
+  max-width: 800px;
+}
+
+.booking-card img {
+  width: 260px;
+  height: auto;
+  object-fit: cover;
+}
+
+.booking-info {
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.booking-info h2 {
+  font-size: 20px;
+  margin: 0;
+  color: #0071c2;
+}
+
+.booking-info h2 a {
+  text-decoration: none;
+  color: #0071c2;
+}
+
+.badges {
+  margin: 5px 0;
+}
+
+.badges span {
+  display: inline-block;
+  background: #febb02;
+  color: #111;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-right: 3px;
+}
+
+.location {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #444;
+}
+
+.location a {
+  color: #0071c2;
+  text-decoration: none;
+}
+
+.description {
+  font-size: 13px;
+  color: #444;
+  margin: 8px 0;
+}
+
+.room-details {
+  font-size: 13px;
+  color: #222;
+  margin: 8px 0;
+}
+
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.rating-box {
+  background: #003580;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 8px;
+  border-radius: 6px;
+  margin-left: 8px;
+}
+
+.booking-button {
+  background: #0071c2;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.booking-button:hover {
+  background: #005999;
+}
+
+/* Slider specific */
+.booking-card .slider-wrapper {
+  position: relative;
+  width: 260px;
+  flex-shrink: 0;
+}
+
+.booking-card .slide-img {
+  width: 100% !important;
+  height: 376px !important;
+  object-fit: cover;
+  display: none;
+  cursor: pointer;
+}
+
+.booking-card .slide-img.active {
+  display: block;
+}
+
+.booking-card .slider-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.booking-card .slider-buttons button {
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Lightbox */
+#lightbox {
+  display: none;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+#lightbox .lightbox-buttons {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+
+#lightbox .lightbox-buttons button {
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+<!-- apt 1 -->
+
+<div class="booking-card">
+  <div class="slider-wrapper">
+    <img class="slide-img active" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWydb7hVWAtLIwkzgLJ-Q9uvsi8C65VdwEHdsvlEFQzfxA1B-cXEISJvzlyYrH_zV-TKit4PUxjrW5DjqZqK_7gmSrsYEkM46-eUZuAIGQxg0DbjntFL9hDdLvEWBO3FODQ1XIIhsjOVGAo54Edfrw356GgLJqyf3lUxFucKfgpw6DDF4VApc3dHD7JZ5K/s1600-rw/ZARI-BOUTIQUE-ApartHotel-1.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjob11Q8lhz5nCLfbwgsa-KBtJPsnKV3LKY2cV3OgLOWkNYzxc2ke_H82FcYWA6SMXI7NuKajRah6ayhO4ovHRov5GxOnTIenCAfcycFIGdRTL5gdF0FgTh81zTzFeqBtpydk0tk9qSXR1whDiajI3Pv6k1Aau30n1VlbQevFrAkGfyPjDimrxbybfclo1H/s1600/ZARI-BOUTIQUE-ApartHotel-2.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEheDJ9wc86XdA5CveD8W6OMxJz9q-51unOU0UIoCtuvlVL0s1Ct3e375w27s05M3O_teblc_CWtfdTeXEDhS8_OquHIEeA_3qPuZf1YWphtqobggUb94nGuiHlwGmAAKWXt6Szn9bPZ0SqYiiZgMFluwIA9-akEgV5Fg2DHjfprHCEzbmsYKmOkVnxdPDK9/s1600/ZARI-BOUTIQUE-ApartHotel-3.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1uNoxByWpRywxHed9Ur9ZI4PPUTkJ2Aq7DOL0-LfyGbHT4g6t6TKDuN-Y1LYa2bVyzCgeoFc8oNZbo0wQG8oKZuTCvV4Zkxk4EaxE3lzojctrhjz8nuYlrQF_ZnU7KYkYPc9EARbMoHzz_QlMSvNMvZtonrVZtsUNwW3i-x8Z3Foee_65st63lM8dH_ST/s1600/ZARI-BOUTIQUE-ApartHotel-4.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwD0ry1I-_JYUG6bsglTlQcmNPxBfsOvHmJRVm9tiQ6O-nl2LUB3YNoNdnbc73Kcnr6n9GEw1-0gOV1nqVYIeR2pWzbaUeXkBRI-uVV5HZqk4edlKIjyCEfZmrxDitIWuE5g6jWxE4sUiGWCU3juumjUGOXl2LkP1SNs_CBk2c-O56r5Y9cb4OylT2sq2y/s1600/ZARI-BOUTIQUE-ApartHotel-5.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigjsm6j0A9Fdv02c4QZ607SKfKH8IpUSCJ62QCDV3cuPvGBTL9hkhrMXuEN6Q3knN35iMBQ5rYNpeVVC4ZgrV_jMJWaBWTDY_kbscajLQKd_58BWDRAGk9p_UaYMwEc6opbhw9eBhBN55dj8ghyIIs1Ty6uQGIXKSxnTIhdYYEMDKOvTq1Lo_0mLjaHw2N/s1600/ZARI-BOUTIQUE-ApartHotel-6.webp.webp">
+    
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6BCJffJ2vXukGcr3QvpjgLfmHgzkWWqq1Rys4KfBoYrp-wm7nxGr5henpGjpZRnJLC3ZUJmX4jFD0NXq08ahLGciT8KGHMaZnakrrUSUtdNvebaFBKxaJ4necL9yiiSasTnKAgrUkdpSf3LQExR4qhOhhXyolezwzJndvrQvchyphenhyphenhO5nup6rVfpXDx_Jtl/s1600-rw/ZARI-BOUTIQUE-ApartHotel-7.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigjsm6j0A9Fdv02c4QZ607SKfKH8IpUSCJ62QCDV3cuPvGBTL9hkhrMXuEN6Q3knN35iMBQ5rYNpeVVC4ZgrV_jMJWaBWTDY_kbscajLQKd_58BWDRAGk9p_UaYMwEc6opbhw9eBhBN55dj8ghyIIs1Ty6uQGIXKSxnTIhdYYEMDKOvTq1Lo_0mLjaHw2N/s1600-rw/ZARI-BOUTIQUE-ApartHotel-6.webp">
+    
+    <div class="slider-buttons">
+      <button id="prev">❮</button>
+      <button id="next">❯</button>
+    </div>
+  </div>
+  
+  <div class="booking-info">
+    <div>
+      <h2><a href="https://booking.tpm.lv/ktrX54XT">ZARI BOUTIQUE ApartHotel</a></h2>
+      <div class="badges">
+        <span>Apartment</span>
+      </div>
+      <div class="location">
+        <a href="https://booking.tpm.lv/zgHjIaPu">Marrakech</a> • 1.6 km from centre
+      </div>
+      <div class="description">
+        Offering a terrace, free WiFi, and private check-in, this aparthotel ensures a comfortable stay.
+      </div>
+      <div class="room-details">
+        <b>Junior Suite with Balcony</b><br>
+        Private suite • 1 bedroom • 1 living room • 1 bathroom • 55 m²<br>
+        1 large double bed<br>
+        🚗 Parking + ⚡ High-speed internet<br>
+      </div>
+    </div>
+    <div class="price-section">
+      <div class="rating">Very good <div class="rating-box">8.2</div><br><small>reviews in Booking</small></div>
+      <a href="https://booking.tpm.lv/ktrX54XT" class="booking-button">See availability</a>
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox overlay -->
+<div id="lightbox">
+  <img id="lightbox-img" src="">
+  <div class="lightbox-buttons">
+    <button id="lightbox-prev">❮</button>
+    <button id="lightbox-next">❯</button>
+  </div>
+</div>
+
+
+<!-- apt 2 -->
+
+<div class="booking-card">
+  <div class="slider-wrapper">
+    <img class="slide-img active" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWydb7hVWAtLIwkzgLJ-Q9uvsi8C65VdwEHdsvlEFQzfxA1B-cXEISJvzlyYrH_zV-TKit4PUxjrW5DjqZqK_7gmSrsYEkM46-eUZuAIGQxg0DbjntFL9hDdLvEWBO3FODQ1XIIhsjOVGAo54Edfrw356GgLJqyf3lUxFucKfgpw6DDF4VApc3dHD7JZ5K/s1600-rw/ZARI-BOUTIQUE-ApartHotel-1.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjob11Q8lhz5nCLfbwgsa-KBtJPsnKV3LKY2cV3OgLOWkNYzxc2ke_H82FcYWA6SMXI7NuKajRah6ayhO4ovHRov5GxOnTIenCAfcycFIGdRTL5gdF0FgTh81zTzFeqBtpydk0tk9qSXR1whDiajI3Pv6k1Aau30n1VlbQevFrAkGfyPjDimrxbybfclo1H/s1600/ZARI-BOUTIQUE-ApartHotel-2.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEheDJ9wc86XdA5CveD8W6OMxJz9q-51unOU0UIoCtuvlVL0s1Ct3e375w27s05M3O_teblc_CWtfdTeXEDhS8_OquHIEeA_3qPuZf1YWphtqobggUb94nGuiHlwGmAAKWXt6Szn9bPZ0SqYiiZgMFluwIA9-akEgV5Fg2DHjfprHCEzbmsYKmOkVnxdPDK9/s1600/ZARI-BOUTIQUE-ApartHotel-3.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1uNoxByWpRywxHed9Ur9ZI4PPUTkJ2Aq7DOL0-LfyGbHT4g6t6TKDuN-Y1LYa2bVyzCgeoFc8oNZbo0wQG8oKZuTCvV4Zkxk4EaxE3lzojctrhjz8nuYlrQF_ZnU7KYkYPc9EARbMoHzz_QlMSvNMvZtonrVZtsUNwW3i-x8Z3Foee_65st63lM8dH_ST/s1600/ZARI-BOUTIQUE-ApartHotel-4.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwD0ry1I-_JYUG6bsglTlQcmNPxBfsOvHmJRVm9tiQ6O-nl2LUB3YNoNdnbc73Kcnr6n9GEw1-0gOV1nqVYIeR2pWzbaUeXkBRI-uVV5HZqk4edlKIjyCEfZmrxDitIWuE5g6jWxE4sUiGWCU3juumjUGOXl2LkP1SNs_CBk2c-O56r5Y9cb4OylT2sq2y/s1600/ZARI-BOUTIQUE-ApartHotel-5.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigjsm6j0A9Fdv02c4QZ607SKfKH8IpUSCJ62QCDV3cuPvGBTL9hkhrMXuEN6Q3knN35iMBQ5rYNpeVVC4ZgrV_jMJWaBWTDY_kbscajLQKd_58BWDRAGk9p_UaYMwEc6opbhw9eBhBN55dj8ghyIIs1Ty6uQGIXKSxnTIhdYYEMDKOvTq1Lo_0mLjaHw2N/s1600/ZARI-BOUTIQUE-ApartHotel-6.webp.webp">
+    
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6BCJffJ2vXukGcr3QvpjgLfmHgzkWWqq1Rys4KfBoYrp-wm7nxGr5henpGjpZRnJLC3ZUJmX4jFD0NXq08ahLGciT8KGHMaZnakrrUSUtdNvebaFBKxaJ4necL9yiiSasTnKAgrUkdpSf3LQExR4qhOhhXyolezwzJndvrQvchyphenhyphenhO5nup6rVfpXDx_Jtl/s1600-rw/ZARI-BOUTIQUE-ApartHotel-7.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigjsm6j0A9Fdv02c4QZ607SKfKH8IpUSCJ62QCDV3cuPvGBTL9hkhrMXuEN6Q3knN35iMBQ5rYNpeVVC4ZgrV_jMJWaBWTDY_kbscajLQKd_58BWDRAGk9p_UaYMwEc6opbhw9eBhBN55dj8ghyIIs1Ty6uQGIXKSxnTIhdYYEMDKOvTq1Lo_0mLjaHw2N/s1600-rw/ZARI-BOUTIQUE-ApartHotel-6.webp">
+    
+    <div class="slider-buttons">
+      <button id="prev">❮</button>
+      <button id="next">❯</button>
+    </div>
+  </div>
+  <div class="booking-info">
+    <div>
+      <h2><a href="https://booking.tpm.lv/ukMKAAVu">Appart Hôtel Mouna</a></h2>
+      <div class="badges">
+        <span>Apartment</span>
+      </div>
+      <div class="location">
+        <a href="https://booking.tpm.lv/zgHjIaPu">Marrakech</a> • 1.3 km from centre
+      </div>
+      <div class="description">
+        Offering spa facilities, a modern restaurant, and a terrace, this aparthotel ensures relaxation.
+      </div>
+      <div class="room-details">
+        <b>Superior Apartment</b><br>
+        Entire apartment • 1 bedroom • 1 bathroom • 1 kitchen • 60 m²<br>
+        1 large double bed<br>
+        ✅ No prepayment needed – pay at the property<br>
+      </div>
+    </div>
+    <div class="price-section">
+      <div class="rating">Very good <div class="rating-box">8.2</div><br><small>reviews in Booking</small></div>
+      <a href="https://booking.tpm.lv/ukMKAAVu" class="booking-button">See availability</a>
+    </div>
+  </div>
+</div>
+
+<!-- apt 3 -->
+
+<div class="booking-card">
+<div class="slider-wrapper">
+    <img class="slide-img active" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWydb7hVWAtLIwkzgLJ-Q9uvsi8C65VdwEHdsvlEFQzfxA1B-cXEISJvzlyYrH_zV-TKit4PUxjrW5DjqZqK_7gmSrsYEkM46-eUZuAIGQxg0DbjntFL9hDdLvEWBO3FODQ1XIIhsjOVGAo54Edfrw356GgLJqyf3lUxFucKfgpw6DDF4VApc3dHD7JZ5K/s1600-rw/ZARI-BOUTIQUE-ApartHotel-1.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjob11Q8lhz5nCLfbwgsa-KBtJPsnKV3LKY2cV3OgLOWkNYzxc2ke_H82FcYWA6SMXI7NuKajRah6ayhO4ovHRov5GxOnTIenCAfcycFIGdRTL5gdF0FgTh81zTzFeqBtpydk0tk9qSXR1whDiajI3Pv6k1Aau30n1VlbQevFrAkGfyPjDimrxbybfclo1H/s1600/ZARI-BOUTIQUE-ApartHotel-2.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEheDJ9wc86XdA5CveD8W6OMxJz9q-51unOU0UIoCtuvlVL0s1Ct3e375w27s05M3O_teblc_CWtfdTeXEDhS8_OquHIEeA_3qPuZf1YWphtqobggUb94nGuiHlwGmAAKWXt6Szn9bPZ0SqYiiZgMFluwIA9-akEgV5Fg2DHjfprHCEzbmsYKmOkVnxdPDK9/s1600/ZARI-BOUTIQUE-ApartHotel-3.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1uNoxByWpRywxHed9Ur9ZI4PPUTkJ2Aq7DOL0-LfyGbHT4g6t6TKDuN-Y1LYa2bVyzCgeoFc8oNZbo0wQG8oKZuTCvV4Zkxk4EaxE3lzojctrhjz8nuYlrQF_ZnU7KYkYPc9EARbMoHzz_QlMSvNMvZtonrVZtsUNwW3i-x8Z3Foee_65st63lM8dH_ST/s1600/ZARI-BOUTIQUE-ApartHotel-4.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwD0ry1I-_JYUG6bsglTlQcmNPxBfsOvHmJRVm9tiQ6O-nl2LUB3YNoNdnbc73Kcnr6n9GEw1-0gOV1nqVYIeR2pWzbaUeXkBRI-uVV5HZqk4edlKIjyCEfZmrxDitIWuE5g6jWxE4sUiGWCU3juumjUGOXl2LkP1SNs_CBk2c-O56r5Y9cb4OylT2sq2y/s1600/ZARI-BOUTIQUE-ApartHotel-5.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigjsm6j0A9Fdv02c4QZ607SKfKH8IpUSCJ62QCDV3cuPvGBTL9hkhrMXuEN6Q3knN35iMBQ5rYNpeVVC4ZgrV_jMJWaBWTDY_kbscajLQKd_58BWDRAGk9p_UaYMwEc6opbhw9eBhBN55dj8ghyIIs1Ty6uQGIXKSxnTIhdYYEMDKOvTq1Lo_0mLjaHw2N/s1600/ZARI-BOUTIQUE-ApartHotel-6.webp.webp">
+    
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6BCJffJ2vXukGcr3QvpjgLfmHgzkWWqq1Rys4KfBoYrp-wm7nxGr5henpGjpZRnJLC3ZUJmX4jFD0NXq08ahLGciT8KGHMaZnakrrUSUtdNvebaFBKxaJ4necL9yiiSasTnKAgrUkdpSf3LQExR4qhOhhXyolezwzJndvrQvchyphenhyphenhO5nup6rVfpXDx_Jtl/s1600-rw/ZARI-BOUTIQUE-ApartHotel-7.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigjsm6j0A9Fdv02c4QZ607SKfKH8IpUSCJ62QCDV3cuPvGBTL9hkhrMXuEN6Q3knN35iMBQ5rYNpeVVC4ZgrV_jMJWaBWTDY_kbscajLQKd_58BWDRAGk9p_UaYMwEc6opbhw9eBhBN55dj8ghyIIs1Ty6uQGIXKSxnTIhdYYEMDKOvTq1Lo_0mLjaHw2N/s1600-rw/ZARI-BOUTIQUE-ApartHotel-6.webp">
+    
+    <div class="slider-buttons">
+      <button id="prev">❮</button>
+      <button id="next">❯</button>
+    </div>
+  </div>
+  
+  <div class="booking-info">
+    <div>
+      <h2><a href="https://booking.tpm.lv/xuqWZNVg">Sweet Jacob's Appartment Gueliz City Center</a></h2>
+      <div class="badges">
+        <span>Apartment</span>
+      </div>
+      <div class="location">
+        <a href="https://booking.tpm.lv/zgHjIaPu">Marrakech</a> • 0.6 km from centre
+      </div>
+      <div class="description">
+        Offering a sun terrace, garden, restaurant, and bar, this apartment ensures a delightful stay.
+      </div>
+      <div class="room-details">
+        <b>Two-Bedroom Apartment</b><br>
+        Entire apartment • 2 bedrooms • 1 living room • 2 bathrooms • 1 kitchen • 160 m²<br>
+        3 beds (1 single, 1 extra-large double, 1 large double)<br>
+        ✅ No prepayment needed – pay at the property<br>
+      </div>
+    </div>
+    <div class="price-section">
+      <div class="rating">Superb <div class="rating-box">9.1</div><br><small>reviews in Booking • Location 9.3</small></div>
+      <a href="https://booking.tpm.lv/xuqWZNVg" class="booking-button">See availability</a>
+    </div>
+  </div>
+</div>
+
+<!-- apt 4 -->
+
+<div class="booking-card">
+<div class="slider-wrapper">
+    <img class="slide-img active" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWydb7hVWAtLIwkzgLJ-Q9uvsi8C65VdwEHdsvlEFQzfxA1B-cXEISJvzlyYrH_zV-TKit4PUxjrW5DjqZqK_7gmSrsYEkM46-eUZuAIGQxg0DbjntFL9hDdLvEWBO3FODQ1XIIhsjOVGAo54Edfrw356GgLJqyf3lUxFucKfgpw6DDF4VApc3dHD7JZ5K/s1600-rw/ZARI-BOUTIQUE-ApartHotel-1.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjob11Q8lhz5nCLfbwgsa-KBtJPsnKV3LKY2cV3OgLOWkNYzxc2ke_H82FcYWA6SMXI7NuKajRah6ayhO4ovHRov5GxOnTIenCAfcycFIGdRTL5gdF0FgTh81zTzFeqBtpydk0tk9qSXR1whDiajI3Pv6k1Aau30n1VlbQevFrAkGfyPjDimrxbybfclo1H/s1600/ZARI-BOUTIQUE-ApartHotel-2.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEheDJ9wc86XdA5CveD8W6OMxJz9q-51unOU0UIoCtuvlVL0s1Ct3e375w27s05M3O_teblc_CWtfdTeXEDhS8_OquHIEeA_3qPuZf1YWphtqobggUb94nGuiHlwGmAAKWXt6Szn9bPZ0SqYiiZgMFluwIA9-akEgV5Fg2DHjfprHCEzbmsYKmOkVnxdPDK9/s1600/ZARI-BOUTIQUE-ApartHotel-3.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1uNoxByWpRywxHed9Ur9ZI4PPUTkJ2Aq7DOL0-LfyGbHT4g6t6TKDuN-Y1LYa2bVyzCgeoFc8oNZbo0wQG8oKZuTCvV4Zkxk4EaxE3lzojctrhjz8nuYlrQF_ZnU7KYkYPc9EARbMoHzz_QlMSvNMvZtonrVZtsUNwW3i-x8Z3Foee_65st63lM8dH_ST/s1600/ZARI-BOUTIQUE-ApartHotel-4.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwD0ry1I-_JYUG6bsglTlQcmNPxBfsOvHmJRVm9tiQ6O-nl2LUB3YNoNdnbc73Kcnr6n9GEw1-0gOV1nqVYIeR2pWzbaUeXkBRI-uVV5HZqk4edlKIjyCEfZmrxDitIWuE5g6jWxE4sUiGWCU3juumjUGOXl2LkP1SNs_CBk2c-O56r5Y9cb4OylT2sq2y/s1600/ZARI-BOUTIQUE-ApartHotel-5.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigjsm6j0A9Fdv02c4QZ607SKfKH8IpUSCJ62QCDV3cuPvGBTL9hkhrMXuEN6Q3knN35iMBQ5rYNpeVVC4ZgrV_jMJWaBWTDY_kbscajLQKd_58BWDRAGk9p_UaYMwEc6opbhw9eBhBN55dj8ghyIIs1Ty6uQGIXKSxnTIhdYYEMDKOvTq1Lo_0mLjaHw2N/s1600/ZARI-BOUTIQUE-ApartHotel-6.webp.webp">
+    
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6BCJffJ2vXukGcr3QvpjgLfmHgzkWWqq1Rys4KfBoYrp-wm7nxGr5henpGjpZRnJLC3ZUJmX4jFD0NXq08ahLGciT8KGHMaZnakrrUSUtdNvebaFBKxaJ4necL9yiiSasTnKAgrUkdpSf3LQExR4qhOhhXyolezwzJndvrQvchyphenhyphenhO5nup6rVfpXDx_Jtl/s1600-rw/ZARI-BOUTIQUE-ApartHotel-7.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigjsm6j0A9Fdv02c4QZ607SKfKH8IpUSCJ62QCDV3cuPvGBTL9hkhrMXuEN6Q3knN35iMBQ5rYNpeVVC4ZgrV_jMJWaBWTDY_kbscajLQKd_58BWDRAGk9p_UaYMwEc6opbhw9eBhBN55dj8ghyIIs1Ty6uQGIXKSxnTIhdYYEMDKOvTq1Lo_0mLjaHw2N/s1600-rw/ZARI-BOUTIQUE-ApartHotel-6.webp">
+    
+    <div class="slider-buttons">
+      <button id="prev">❮</button>
+      <button id="next">❯</button>
+    </div>
+  </div>
+  
+  <div class="booking-info">
+    <div>
+      <h2><a href="https://booking.tpm.lv/0OxGvInU">Résidence Las Palmeras</a></h2>
+      <div class="badges">
+        <span>Apartment</span>
+      </div>
+      <div class="location">
+        <a href="https://booking.tpm.lv/WcLSWHQH">Gueliz, Marrakech</a> • 1.2 km from centre
+      </div>
+      <div class="description">
+        Spacious apartment with air-conditioning, kitchenette, balcony, and free on-site private parking available.
+      </div>
+      <div class="room-details">
+        <b>One-Bedroom Apartment</b><br>
+        Entire apartment • 1 bedroom • 1 living room • 2 bathrooms • 65 m²<br>
+        2 beds (1 double, 1 sofa bed)<br>
+      </div>
+    </div>
+    <div class="price-section">
+      <div class="rating">Exceptional <div class="rating-box">9.7</div><br><small>reviews in Booking • Location 9.4</small></div>
+      <a href="https://booking.tpm.lv/0OxGvInU" class="booking-button">See availability</a>
+    </div>
+  </div>
+</div>
+
+<!-- apt 5 -->
+
+<div class="booking-card">
+<div class="slider-wrapper">
+    <img class="slide-img active" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWydb7hVWAtLIwkzgLJ-Q9uvsi8C65VdwEHdsvlEFQzfxA1B-cXEISJvzlyYrH_zV-TKit4PUxjrW5DjqZqK_7gmSrsYEkM46-eUZuAIGQxg0DbjntFL9hDdLvEWBO3FODQ1XIIhsjOVGAo54Edfrw356GgLJqyf3lUxFucKfgpw6DDF4VApc3dHD7JZ5K/s1600-rw/ZARI-BOUTIQUE-ApartHotel-1.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjob11Q8lhz5nCLfbwgsa-KBtJPsnKV3LKY2cV3OgLOWkNYzxc2ke_H82FcYWA6SMXI7NuKajRah6ayhO4ovHRov5GxOnTIenCAfcycFIGdRTL5gdF0FgTh81zTzFeqBtpydk0tk9qSXR1whDiajI3Pv6k1Aau30n1VlbQevFrAkGfyPjDimrxbybfclo1H/s1600/ZARI-BOUTIQUE-ApartHotel-2.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEheDJ9wc86XdA5CveD8W6OMxJz9q-51unOU0UIoCtuvlVL0s1Ct3e375w27s05M3O_teblc_CWtfdTeXEDhS8_OquHIEeA_3qPuZf1YWphtqobggUb94nGuiHlwGmAAKWXt6Szn9bPZ0SqYiiZgMFluwIA9-akEgV5Fg2DHjfprHCEzbmsYKmOkVnxdPDK9/s1600/ZARI-BOUTIQUE-ApartHotel-3.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1uNoxByWpRywxHed9Ur9ZI4PPUTkJ2Aq7DOL0-LfyGbHT4g6t6TKDuN-Y1LYa2bVyzCgeoFc8oNZbo0wQG8oKZuTCvV4Zkxk4EaxE3lzojctrhjz8nuYlrQF_ZnU7KYkYPc9EARbMoHzz_QlMSvNMvZtonrVZtsUNwW3i-x8Z3Foee_65st63lM8dH_ST/s1600/ZARI-BOUTIQUE-ApartHotel-4.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwD0ry1I-_JYUG6bsglTlQcmNPxBfsOvHmJRVm9tiQ6O-nl2LUB3YNoNdnbc73Kcnr6n9GEw1-0gOV1nqVYIeR2pWzbaUeXkBRI-uVV5HZqk4edlKIjyCEfZmrxDitIWuE5g6jWxE4sUiGWCU3juumjUGOXl2LkP1SNs_CBk2c-O56r5Y9cb4OylT2sq2y/s1600/ZARI-BOUTIQUE-ApartHotel-5.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigjsm6j0A9Fdv02c4QZ607SKfKH8IpUSCJ62QCDV3cuPvGBTL9hkhrMXuEN6Q3knN35iMBQ5rYNpeVVC4ZgrV_jMJWaBWTDY_kbscajLQKd_58BWDRAGk9p_UaYMwEc6opbhw9eBhBN55dj8ghyIIs1Ty6uQGIXKSxnTIhdYYEMDKOvTq1Lo_0mLjaHw2N/s1600/ZARI-BOUTIQUE-ApartHotel-6.webp.webp">
+    
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6BCJffJ2vXukGcr3QvpjgLfmHgzkWWqq1Rys4KfBoYrp-wm7nxGr5henpGjpZRnJLC3ZUJmX4jFD0NXq08ahLGciT8KGHMaZnakrrUSUtdNvebaFBKxaJ4necL9yiiSasTnKAgrUkdpSf3LQExR4qhOhhXyolezwzJndvrQvchyphenhyphenhO5nup6rVfpXDx_Jtl/s1600-rw/ZARI-BOUTIQUE-ApartHotel-7.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigjsm6j0A9Fdv02c4QZ607SKfKH8IpUSCJ62QCDV3cuPvGBTL9hkhrMXuEN6Q3knN35iMBQ5rYNpeVVC4ZgrV_jMJWaBWTDY_kbscajLQKd_58BWDRAGk9p_UaYMwEc6opbhw9eBhBN55dj8ghyIIs1Ty6uQGIXKSxnTIhdYYEMDKOvTq1Lo_0mLjaHw2N/s1600-rw/ZARI-BOUTIQUE-ApartHotel-6.webp">
+    
+    <div class="slider-buttons">
+      <button id="prev">❮</button>
+      <button id="next">❯</button>
+    </div>
+  </div>
+  
+  <div class="booking-info">
+    <div>
+      <h2><a href="https://booking.tpm.lv/vdXwx5oA">AppartHotel Atrani</a></h2>
+      <div class="badges">
+        <span>Apartment</span>
+      </div>
+      <div class="location">
+        <a href="https://booking.tpm.lv/Eura8yJk">Hivernage, Marrakech</a> • 1.7 km from centre
+      </div>
+      <div class="description">
+        Offering a terrace, family rooms, and private check-in, this aparthotel ensures a comfortable stay.
+      </div>
+      <div class="room-details">
+        <b>Superior Studio</b><br>
+        Entire studio • 1 bathroom • 52 m²<br>
+        1 large double bed<br>
+        ✅ No prepayment needed – pay at the property
+      </div>
+    </div>
+    <div class="price-section">
+      <div class="rating">Very good <div class="rating-box">8.2</div><br><small>reviews in Booking</small></div>
+      <a href="https://booking.tpm.lv/vdXwx5oA" class="booking-button">See availability</a>
+    </div>
+  </div>
+</div>
+
+<!-- apt 6 -->
+
+<div class="booking-card">
+<div class="slider-wrapper">
+    <img class="slide-img active" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWydb7hVWAtLIwkzgLJ-Q9uvsi8C65VdwEHdsvlEFQzfxA1B-cXEISJvzlyYrH_zV-TKit4PUxjrW5DjqZqK_7gmSrsYEkM46-eUZuAIGQxg0DbjntFL9hDdLvEWBO3FODQ1XIIhsjOVGAo54Edfrw356GgLJqyf3lUxFucKfgpw6DDF4VApc3dHD7JZ5K/s1600-rw/ZARI-BOUTIQUE-ApartHotel-1.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjob11Q8lhz5nCLfbwgsa-KBtJPsnKV3LKY2cV3OgLOWkNYzxc2ke_H82FcYWA6SMXI7NuKajRah6ayhO4ovHRov5GxOnTIenCAfcycFIGdRTL5gdF0FgTh81zTzFeqBtpydk0tk9qSXR1whDiajI3Pv6k1Aau30n1VlbQevFrAkGfyPjDimrxbybfclo1H/s1600/ZARI-BOUTIQUE-ApartHotel-2.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEheDJ9wc86XdA5CveD8W6OMxJz9q-51unOU0UIoCtuvlVL0s1Ct3e375w27s05M3O_teblc_CWtfdTeXEDhS8_OquHIEeA_3qPuZf1YWphtqobggUb94nGuiHlwGmAAKWXt6Szn9bPZ0SqYiiZgMFluwIA9-akEgV5Fg2DHjfprHCEzbmsYKmOkVnxdPDK9/s1600/ZARI-BOUTIQUE-ApartHotel-3.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1uNoxByWpRywxHed9Ur9ZI4PPUTkJ2Aq7DOL0-LfyGbHT4g6t6TKDuN-Y1LYa2bVyzCgeoFc8oNZbo0wQG8oKZuTCvV4Zkxk4EaxE3lzojctrhjz8nuYlrQF_ZnU7KYkYPc9EARbMoHzz_QlMSvNMvZtonrVZtsUNwW3i-x8Z3Foee_65st63lM8dH_ST/s1600/ZARI-BOUTIQUE-ApartHotel-4.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwD0ry1I-_JYUG6bsglTlQcmNPxBfsOvHmJRVm9tiQ6O-nl2LUB3YNoNdnbc73Kcnr6n9GEw1-0gOV1nqVYIeR2pWzbaUeXkBRI-uVV5HZqk4edlKIjyCEfZmrxDitIWuE5g6jWxE4sUiGWCU3juumjUGOXl2LkP1SNs_CBk2c-O56r5Y9cb4OylT2sq2y/s1600/ZARI-BOUTIQUE-ApartHotel-5.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigjsm6j0A9Fdv02c4QZ607SKfKH8IpUSCJ62QCDV3cuPvGBTL9hkhrMXuEN6Q3knN35iMBQ5rYNpeVVC4ZgrV_jMJWaBWTDY_kbscajLQKd_58BWDRAGk9p_UaYMwEc6opbhw9eBhBN55dj8ghyIIs1Ty6uQGIXKSxnTIhdYYEMDKOvTq1Lo_0mLjaHw2N/s1600/ZARI-BOUTIQUE-ApartHotel-6.webp.webp">
+    
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6BCJffJ2vXukGcr3QvpjgLfmHgzkWWqq1Rys4KfBoYrp-wm7nxGr5henpGjpZRnJLC3ZUJmX4jFD0NXq08ahLGciT8KGHMaZnakrrUSUtdNvebaFBKxaJ4necL9yiiSasTnKAgrUkdpSf3LQExR4qhOhhXyolezwzJndvrQvchyphenhyphenhO5nup6rVfpXDx_Jtl/s1600-rw/ZARI-BOUTIQUE-ApartHotel-7.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigjsm6j0A9Fdv02c4QZ607SKfKH8IpUSCJ62QCDV3cuPvGBTL9hkhrMXuEN6Q3knN35iMBQ5rYNpeVVC4ZgrV_jMJWaBWTDY_kbscajLQKd_58BWDRAGk9p_UaYMwEc6opbhw9eBhBN55dj8ghyIIs1Ty6uQGIXKSxnTIhdYYEMDKOvTq1Lo_0mLjaHw2N/s1600-rw/ZARI-BOUTIQUE-ApartHotel-6.webp">
+    
+    <div class="slider-buttons">
+      <button id="prev">❮</button>
+      <button id="next">❯</button>
+    </div>
+  </div>
+  
+  <div class="booking-info">
+    <div>
+      <h2><a href="https://booking.tpm.lv/9RBp9C2B">Marrakech appartement babylon2</a></h2>
+      <div class="badges">
+        <span>Apartment</span>
+      </div>
+      <div class="location">
+        <a href="https://booking.tpm.lv/Eura8yJk">Hivernage, Marrakech</a> • 1.4 km from centre
+      </div>
+      <div class="description">
+        This apartment offers air-conditioning, a private pool, kitchenette, and free on-site private parking.
+      </div>
+      <div class="room-details">
+        <b>One-Bedroom Apartment</b><br>
+        Entire apartment • 1 bedroom • 2 bathrooms<br>
+        1 double bed
+      </div>
+    </div>
+    <div class="price-section">
+      <div class="rating">Fabulous <div class="rating-box">8.6</div><br><small>reviews in Booking</small></div>
+      <a href="https://booking.tpm.lv/9RBp9C2B" class="booking-button">See availability</a>
+    </div>
+  </div>
+</div>
+
+<!-- apt 7 -->
+
+<div class="booking-card">
+<div class="slider-wrapper">
+    <img class="slide-img active" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWydb7hVWAtLIwkzgLJ-Q9uvsi8C65VdwEHdsvlEFQzfxA1B-cXEISJvzlyYrH_zV-TKit4PUxjrW5DjqZqK_7gmSrsYEkM46-eUZuAIGQxg0DbjntFL9hDdLvEWBO3FODQ1XIIhsjOVGAo54Edfrw356GgLJqyf3lUxFucKfgpw6DDF4VApc3dHD7JZ5K/s1600-rw/ZARI-BOUTIQUE-ApartHotel-1.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjob11Q8lhz5nCLfbwgsa-KBtJPsnKV3LKY2cV3OgLOWkNYzxc2ke_H82FcYWA6SMXI7NuKajRah6ayhO4ovHRov5GxOnTIenCAfcycFIGdRTL5gdF0FgTh81zTzFeqBtpydk0tk9qSXR1whDiajI3Pv6k1Aau30n1VlbQevFrAkGfyPjDimrxbybfclo1H/s1600/ZARI-BOUTIQUE-ApartHotel-2.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEheDJ9wc86XdA5CveD8W6OMxJz9q-51unOU0UIoCtuvlVL0s1Ct3e375w27s05M3O_teblc_CWtfdTeXEDhS8_OquHIEeA_3qPuZf1YWphtqobggUb94nGuiHlwGmAAKWXt6Szn9bPZ0SqYiiZgMFluwIA9-akEgV5Fg2DHjfprHCEzbmsYKmOkVnxdPDK9/s1600/ZARI-BOUTIQUE-ApartHotel-3.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1uNoxByWpRywxHed9Ur9ZI4PPUTkJ2Aq7DOL0-LfyGbHT4g6t6TKDuN-Y1LYa2bVyzCgeoFc8oNZbo0wQG8oKZuTCvV4Zkxk4EaxE3lzojctrhjz8nuYlrQF_ZnU7KYkYPc9EARbMoHzz_QlMSvNMvZtonrVZtsUNwW3i-x8Z3Foee_65st63lM8dH_ST/s1600/ZARI-BOUTIQUE-ApartHotel-4.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwD0ry1I-_JYUG6bsglTlQcmNPxBfsOvHmJRVm9tiQ6O-nl2LUB3YNoNdnbc73Kcnr6n9GEw1-0gOV1nqVYIeR2pWzbaUeXkBRI-uVV5HZqk4edlKIjyCEfZmrxDitIWuE5g6jWxE4sUiGWCU3juumjUGOXl2LkP1SNs_CBk2c-O56r5Y9cb4OylT2sq2y/s1600/ZARI-BOUTIQUE-ApartHotel-5.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigjsm6j0A9Fdv02c4QZ607SKfKH8IpUSCJ62QCDV3cuPvGBTL9hkhrMXuEN6Q3knN35iMBQ5rYNpeVVC4ZgrV_jMJWaBWTDY_kbscajLQKd_58BWDRAGk9p_UaYMwEc6opbhw9eBhBN55dj8ghyIIs1Ty6uQGIXKSxnTIhdYYEMDKOvTq1Lo_0mLjaHw2N/s1600/ZARI-BOUTIQUE-ApartHotel-6.webp.webp">
+    
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6BCJffJ2vXukGcr3QvpjgLfmHgzkWWqq1Rys4KfBoYrp-wm7nxGr5henpGjpZRnJLC3ZUJmX4jFD0NXq08ahLGciT8KGHMaZnakrrUSUtdNvebaFBKxaJ4necL9yiiSasTnKAgrUkdpSf3LQExR4qhOhhXyolezwzJndvrQvchyphenhyphenhO5nup6rVfpXDx_Jtl/s1600-rw/ZARI-BOUTIQUE-ApartHotel-7.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigjsm6j0A9Fdv02c4QZ607SKfKH8IpUSCJ62QCDV3cuPvGBTL9hkhrMXuEN6Q3knN35iMBQ5rYNpeVVC4ZgrV_jMJWaBWTDY_kbscajLQKd_58BWDRAGk9p_UaYMwEc6opbhw9eBhBN55dj8ghyIIs1Ty6uQGIXKSxnTIhdYYEMDKOvTq1Lo_0mLjaHw2N/s1600-rw/ZARI-BOUTIQUE-ApartHotel-6.webp">
+    
+    <div class="slider-buttons">
+      <button id="prev">❮</button>
+      <button id="next">❯</button>
+    </div>
+  </div>
+  
+  <div class="booking-info">
+    <div>
+      <h2><a href="https://booking.tpm.lv/MgZ7DnbT">M Appart</a></h2>
+      <div class="badges">
+        <span>Apartment</span>
+      </div>
+      <div class="location">
+        <a href="https://booking.tpm.lv/WcLSWHQH">Gueliz, Marrakech</a> • 1 km from centre
+      </div>
+      <div class="description">
+        Offering a spacious aparthotel with a sun terrace, free WiFi, and convenient on-site parking.
+      </div>
+      <div class="room-details">
+        <b>Apartment</b><br>
+        Entire apartment • 2 bedrooms • 3 living rooms • 2 bathrooms • 1 kitchen • 100 m²<br>
+        3 beds (2 singles, 1 extra-large double)<br>
+        5 nights, 2 adults
+      </div>
+    </div>
+    <div class="price-section">
+      <div class="rating">Superb <div class="rating-box">9.0</div><br><small>reviews in Booking • Location 9.3</small></div>
+      <a href="https://booking.tpm.lv/MgZ7DnbT" class="booking-button">See availability</a>
+    </div>
+  </div>
+</div>
+
+<!-- apt 8 -->
+
+<div class="booking-card">
+<div class="slider-wrapper">
+    <img class="slide-img active" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWydb7hVWAtLIwkzgLJ-Q9uvsi8C65VdwEHdsvlEFQzfxA1B-cXEISJvzlyYrH_zV-TKit4PUxjrW5DjqZqK_7gmSrsYEkM46-eUZuAIGQxg0DbjntFL9hDdLvEWBO3FODQ1XIIhsjOVGAo54Edfrw356GgLJqyf3lUxFucKfgpw6DDF4VApc3dHD7JZ5K/s1600-rw/ZARI-BOUTIQUE-ApartHotel-1.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjob11Q8lhz5nCLfbwgsa-KBtJPsnKV3LKY2cV3OgLOWkNYzxc2ke_H82FcYWA6SMXI7NuKajRah6ayhO4ovHRov5GxOnTIenCAfcycFIGdRTL5gdF0FgTh81zTzFeqBtpydk0tk9qSXR1whDiajI3Pv6k1Aau30n1VlbQevFrAkGfyPjDimrxbybfclo1H/s1600/ZARI-BOUTIQUE-ApartHotel-2.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEheDJ9wc86XdA5CveD8W6OMxJz9q-51unOU0UIoCtuvlVL0s1Ct3e375w27s05M3O_teblc_CWtfdTeXEDhS8_OquHIEeA_3qPuZf1YWphtqobggUb94nGuiHlwGmAAKWXt6Szn9bPZ0SqYiiZgMFluwIA9-akEgV5Fg2DHjfprHCEzbmsYKmOkVnxdPDK9/s1600/ZARI-BOUTIQUE-ApartHotel-3.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1uNoxByWpRywxHed9Ur9ZI4PPUTkJ2Aq7DOL0-LfyGbHT4g6t6TKDuN-Y1LYa2bVyzCgeoFc8oNZbo0wQG8oKZuTCvV4Zkxk4EaxE3lzojctrhjz8nuYlrQF_ZnU7KYkYPc9EARbMoHzz_QlMSvNMvZtonrVZtsUNwW3i-x8Z3Foee_65st63lM8dH_ST/s1600/ZARI-BOUTIQUE-ApartHotel-4.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwD0ry1I-_JYUG6bsglTlQcmNPxBfsOvHmJRVm9tiQ6O-nl2LUB3YNoNdnbc73Kcnr6n9GEw1-0gOV1nqVYIeR2pWzbaUeXkBRI-uVV5HZqk4edlKIjyCEfZmrxDitIWuE5g6jWxE4sUiGWCU3juumjUGOXl2LkP1SNs_CBk2c-O56r5Y9cb4OylT2sq2y/s1600/ZARI-BOUTIQUE-ApartHotel-5.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigjsm6j0A9Fdv02c4QZ607SKfKH8IpUSCJ62QCDV3cuPvGBTL9hkhrMXuEN6Q3knN35iMBQ5rYNpeVVC4ZgrV_jMJWaBWTDY_kbscajLQKd_58BWDRAGk9p_UaYMwEc6opbhw9eBhBN55dj8ghyIIs1Ty6uQGIXKSxnTIhdYYEMDKOvTq1Lo_0mLjaHw2N/s1600/ZARI-BOUTIQUE-ApartHotel-6.webp.webp">
+    
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6BCJffJ2vXukGcr3QvpjgLfmHgzkWWqq1Rys4KfBoYrp-wm7nxGr5henpGjpZRnJLC3ZUJmX4jFD0NXq08ahLGciT8KGHMaZnakrrUSUtdNvebaFBKxaJ4necL9yiiSasTnKAgrUkdpSf3LQExR4qhOhhXyolezwzJndvrQvchyphenhyphenhO5nup6rVfpXDx_Jtl/s1600-rw/ZARI-BOUTIQUE-ApartHotel-7.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigjsm6j0A9Fdv02c4QZ607SKfKH8IpUSCJ62QCDV3cuPvGBTL9hkhrMXuEN6Q3knN35iMBQ5rYNpeVVC4ZgrV_jMJWaBWTDY_kbscajLQKd_58BWDRAGk9p_UaYMwEc6opbhw9eBhBN55dj8ghyIIs1Ty6uQGIXKSxnTIhdYYEMDKOvTq1Lo_0mLjaHw2N/s1600-rw/ZARI-BOUTIQUE-ApartHotel-6.webp">
+    
+    <div class="slider-buttons">
+      <button id="prev">❮</button>
+      <button id="next">❯</button>
+    </div>
+  </div>
+  
+  <div class="booking-info">
+    <div>
+      <h2><a href="https://booking.tpm.lv/UkE3sipR">Atlas Views By Golf Resort</a></h2>
+      <div class="badges">
+        <span>Apartment</span>
+      </div>
+      <div class="location">
+        <a href="https://booking.tpm.lv/zgHjIaPu">Marrakech</a> • 7.2 km from centre
+      </div>
+      <div class="description">
+        This recently renovated property boasts an infinity swimming pool, sun terrace, and beautiful garden.
+      </div>
+      <div class="room-details">
+        <b>One-Bedroom Apartment</b><br>
+        Entire apartment • 1 bedroom • 2 living rooms • 1 bathroom • 1 kitchen • 90 m²<br>
+        5 beds (4 sofa beds, 1 large double)<br>
+        Late check-in + parking + 1 more<br>
+        5 nights, 2 adults
+      </div>
+    </div>
+    <div class="price-section">
+      <div class="rating">Exceptional <div class="rating-box">9.6</div><br><small>reviews in Booking</small></div>
+      <a href="https://booking.tpm.lv/UkE3sipR" class="booking-button">See availability</a>
+    </div>
+  </div>
+</div>
+
+<!-- apt 9 -->
+
+<div class="booking-card">
+<div class="slider-wrapper">
+    <img class="slide-img active" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWydb7hVWAtLIwkzgLJ-Q9uvsi8C65VdwEHdsvlEFQzfxA1B-cXEISJvzlyYrH_zV-TKit4PUxjrW5DjqZqK_7gmSrsYEkM46-eUZuAIGQxg0DbjntFL9hDdLvEWBO3FODQ1XIIhsjOVGAo54Edfrw356GgLJqyf3lUxFucKfgpw6DDF4VApc3dHD7JZ5K/s1600-rw/ZARI-BOUTIQUE-ApartHotel-1.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjob11Q8lhz5nCLfbwgsa-KBtJPsnKV3LKY2cV3OgLOWkNYzxc2ke_H82FcYWA6SMXI7NuKajRah6ayhO4ovHRov5GxOnTIenCAfcycFIGdRTL5gdF0FgTh81zTzFeqBtpydk0tk9qSXR1whDiajI3Pv6k1Aau30n1VlbQevFrAkGfyPjDimrxbybfclo1H/s1600/ZARI-BOUTIQUE-ApartHotel-2.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEheDJ9wc86XdA5CveD8W6OMxJz9q-51unOU0UIoCtuvlVL0s1Ct3e375w27s05M3O_teblc_CWtfdTeXEDhS8_OquHIEeA_3qPuZf1YWphtqobggUb94nGuiHlwGmAAKWXt6Szn9bPZ0SqYiiZgMFluwIA9-akEgV5Fg2DHjfprHCEzbmsYKmOkVnxdPDK9/s1600/ZARI-BOUTIQUE-ApartHotel-3.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1uNoxByWpRywxHed9Ur9ZI4PPUTkJ2Aq7DOL0-LfyGbHT4g6t6TKDuN-Y1LYa2bVyzCgeoFc8oNZbo0wQG8oKZuTCvV4Zkxk4EaxE3lzojctrhjz8nuYlrQF_ZnU7KYkYPc9EARbMoHzz_QlMSvNMvZtonrVZtsUNwW3i-x8Z3Foee_65st63lM8dH_ST/s1600/ZARI-BOUTIQUE-ApartHotel-4.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwD0ry1I-_JYUG6bsglTlQcmNPxBfsOvHmJRVm9tiQ6O-nl2LUB3YNoNdnbc73Kcnr6n9GEw1-0gOV1nqVYIeR2pWzbaUeXkBRI-uVV5HZqk4edlKIjyCEfZmrxDitIWuE5g6jWxE4sUiGWCU3juumjUGOXl2LkP1SNs_CBk2c-O56r5Y9cb4OylT2sq2y/s1600/ZARI-BOUTIQUE-ApartHotel-5.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigjsm6j0A9Fdv02c4QZ607SKfKH8IpUSCJ62QCDV3cuPvGBTL9hkhrMXuEN6Q3knN35iMBQ5rYNpeVVC4ZgrV_jMJWaBWTDY_kbscajLQKd_58BWDRAGk9p_UaYMwEc6opbhw9eBhBN55dj8ghyIIs1Ty6uQGIXKSxnTIhdYYEMDKOvTq1Lo_0mLjaHw2N/s1600/ZARI-BOUTIQUE-ApartHotel-6.webp.webp">
+    
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6BCJffJ2vXukGcr3QvpjgLfmHgzkWWqq1Rys4KfBoYrp-wm7nxGr5henpGjpZRnJLC3ZUJmX4jFD0NXq08ahLGciT8KGHMaZnakrrUSUtdNvebaFBKxaJ4necL9yiiSasTnKAgrUkdpSf3LQExR4qhOhhXyolezwzJndvrQvchyphenhyphenhO5nup6rVfpXDx_Jtl/s1600-rw/ZARI-BOUTIQUE-ApartHotel-7.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigjsm6j0A9Fdv02c4QZ607SKfKH8IpUSCJ62QCDV3cuPvGBTL9hkhrMXuEN6Q3knN35iMBQ5rYNpeVVC4ZgrV_jMJWaBWTDY_kbscajLQKd_58BWDRAGk9p_UaYMwEc6opbhw9eBhBN55dj8ghyIIs1Ty6uQGIXKSxnTIhdYYEMDKOvTq1Lo_0mLjaHw2N/s1600-rw/ZARI-BOUTIQUE-ApartHotel-6.webp">
+    
+    <div class="slider-buttons">
+      <button id="prev">❮</button>
+      <button id="next">❯</button>
+    </div>
+  </div>
+  
+  <div class="booking-info">
+    <div>
+      <h2><a href="https://booking.tpm.lv/kLN730YX">Migdal Gueliz Apart Hôtel</a></h2>
+      <div class="badges">
+        <span>Apartment</span>
+      </div>
+      <div class="location">
+        <a href="https://booking.tpm.lv/zgHjIaPu">Marrakech</a> • 1.6 km from centre
+      </div>
+      <div class="description">
+        Offering a terrace, family rooms, and private check-in, this aparthotel ensures a comfortable stay.
+      </div>
+      <div class="room-details">
+        <b>Apartment with Balcony</b><br>
+        Entire apartment • 2 bedrooms • 1 bathroom • 1 kitchen • 81 m²<br>
+        2 extra-large double beds<br>
+        5 nights, 2 adults
+      </div>
+    </div>
+    <div class="price-section">
+      <div class="rating">Fabulous <div class="rating-box">8.8</div><br><small>reviews in Booking</small></div>
+      <a href="https://booking.tpm.lv/kLN730YX" class="booking-button">See availability</a>
+    </div>
+  </div>
+</div>
+
+<!-- apt 10 -->
+
+<div class="booking-card">
+<div class="slider-wrapper">
+    <img class="slide-img active" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWydb7hVWAtLIwkzgLJ-Q9uvsi8C65VdwEHdsvlEFQzfxA1B-cXEISJvzlyYrH_zV-TKit4PUxjrW5DjqZqK_7gmSrsYEkM46-eUZuAIGQxg0DbjntFL9hDdLvEWBO3FODQ1XIIhsjOVGAo54Edfrw356GgLJqyf3lUxFucKfgpw6DDF4VApc3dHD7JZ5K/s1600-rw/ZARI-BOUTIQUE-ApartHotel-1.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjob11Q8lhz5nCLfbwgsa-KBtJPsnKV3LKY2cV3OgLOWkNYzxc2ke_H82FcYWA6SMXI7NuKajRah6ayhO4ovHRov5GxOnTIenCAfcycFIGdRTL5gdF0FgTh81zTzFeqBtpydk0tk9qSXR1whDiajI3Pv6k1Aau30n1VlbQevFrAkGfyPjDimrxbybfclo1H/s1600/ZARI-BOUTIQUE-ApartHotel-2.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEheDJ9wc86XdA5CveD8W6OMxJz9q-51unOU0UIoCtuvlVL0s1Ct3e375w27s05M3O_teblc_CWtfdTeXEDhS8_OquHIEeA_3qPuZf1YWphtqobggUb94nGuiHlwGmAAKWXt6Szn9bPZ0SqYiiZgMFluwIA9-akEgV5Fg2DHjfprHCEzbmsYKmOkVnxdPDK9/s1600/ZARI-BOUTIQUE-ApartHotel-3.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1uNoxByWpRywxHed9Ur9ZI4PPUTkJ2Aq7DOL0-LfyGbHT4g6t6TKDuN-Y1LYa2bVyzCgeoFc8oNZbo0wQG8oKZuTCvV4Zkxk4EaxE3lzojctrhjz8nuYlrQF_ZnU7KYkYPc9EARbMoHzz_QlMSvNMvZtonrVZtsUNwW3i-x8Z3Foee_65st63lM8dH_ST/s1600/ZARI-BOUTIQUE-ApartHotel-4.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwD0ry1I-_JYUG6bsglTlQcmNPxBfsOvHmJRVm9tiQ6O-nl2LUB3YNoNdnbc73Kcnr6n9GEw1-0gOV1nqVYIeR2pWzbaUeXkBRI-uVV5HZqk4edlKIjyCEfZmrxDitIWuE5g6jWxE4sUiGWCU3juumjUGOXl2LkP1SNs_CBk2c-O56r5Y9cb4OylT2sq2y/s1600/ZARI-BOUTIQUE-ApartHotel-5.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigjsm6j0A9Fdv02c4QZ607SKfKH8IpUSCJ62QCDV3cuPvGBTL9hkhrMXuEN6Q3knN35iMBQ5rYNpeVVC4ZgrV_jMJWaBWTDY_kbscajLQKd_58BWDRAGk9p_UaYMwEc6opbhw9eBhBN55dj8ghyIIs1Ty6uQGIXKSxnTIhdYYEMDKOvTq1Lo_0mLjaHw2N/s1600/ZARI-BOUTIQUE-ApartHotel-6.webp.webp">
+    
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6BCJffJ2vXukGcr3QvpjgLfmHgzkWWqq1Rys4KfBoYrp-wm7nxGr5henpGjpZRnJLC3ZUJmX4jFD0NXq08ahLGciT8KGHMaZnakrrUSUtdNvebaFBKxaJ4necL9yiiSasTnKAgrUkdpSf3LQExR4qhOhhXyolezwzJndvrQvchyphenhyphenhO5nup6rVfpXDx_Jtl/s1600-rw/ZARI-BOUTIQUE-ApartHotel-7.webp">
+    
+    <img class="slide-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigjsm6j0A9Fdv02c4QZ607SKfKH8IpUSCJ62QCDV3cuPvGBTL9hkhrMXuEN6Q3knN35iMBQ5rYNpeVVC4ZgrV_jMJWaBWTDY_kbscajLQKd_58BWDRAGk9p_UaYMwEc6opbhw9eBhBN55dj8ghyIIs1Ty6uQGIXKSxnTIhdYYEMDKOvTq1Lo_0mLjaHw2N/s1600-rw/ZARI-BOUTIQUE-ApartHotel-6.webp">
+    
+    <div class="slider-buttons">
+      <button id="prev">❮</button>
+      <button id="next">❯</button>
+    </div>
+  </div>
+  
+  <div class="booking-info">
+    <div>
+      <h2><a href="https://booking.tpm.lv/VYf4wbnV">Apartment for Rent Luxury Stay Near to Jemaa el-Fnaa</a></h2>
+      <div class="badges">
+        <span>Apartment</span>
+      </div>
+      <div class="location">
+        <a href="https://booking.tpm.lv/WcLSWHQH">Gueliz, Marrakech</a> • 2 km from centre
+      </div>
+      <div class="description">
+        Spacious and recently renovated apartment with private check-in, outdoor fireplace, and free on-site parking.
+      </div>
+      <div class="room-details">
+        <b>One-Bedroom Apartment</b><br>
+        Entire apartment • 1 bedroom • 1 living room • 1 bathroom • 1 kitchen • 70 m²<br>
+        4 beds (3 sofa beds, 1 large double)<br>
+        5 nights, 2 adults
+      </div>
+    </div>
+    <div class="price-section">
+      <div class="rating">Very good <div class="rating-box">8.0</div><br><small>reviews in Booking</small></div>
+      <a href="https://booking.tpm.lv/VYf4wbnV" class="booking-button">See availability</a>
+    </div>
+  </div>
+</div>
+
+<script>
+let slides = document.querySelectorAll('.slide-img');
+let currentIndex = 0;
+
+function showSlide(index) {
+  slides.forEach((s, i) => s.classList.remove('active'));
+  slides[index].classList.add('active');
+}
+
+// Slider buttons
+document.getElementById('next').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+});
+
+document.getElementById('prev').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  showSlide(currentIndex);
+});
+
+// Lightbox
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+slides.forEach((img, index) => {
+  img.addEventListener('click', () => {
+    currentIndex = index;
+    lightbox.style.display = 'flex';
+    lightboxImg.src = slides[currentIndex].src;
+  });
+});
+
+document.getElementById('lightbox-next').addEventListener('click', (e) => {
+  e.stopPropagation();
+  currentIndex = (currentIndex + 1) % slides.length;
+  lightboxImg.src = slides[currentIndex].src;
+});
+
+document.getElementById('lightbox-prev').addEventListener('click', (e) => {
+  e.stopPropagation();
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  lightboxImg.src = slides[currentIndex].src;
+});
+
+// Close lightbox when clicking outside image
+lightbox.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+</script>
+
+</body>
+</html>
